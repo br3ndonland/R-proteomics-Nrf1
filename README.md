@@ -10,9 +10,13 @@ br3ndonland
 
 [![license](https://img.shields.io/badge/license-CC--BY--4.0%20-blue.svg)](https://choosealicense.com/)
 
-Jupyter+R: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=lab/tree/R-proteomics-Nrf1-R.ipynb)
+Run data analysis in your web browser:
 
-RStudio: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=rstudio/tree/R-proteomics-Nrf1.rmd)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=lab) JupyterLab+R
+
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=rstudio) RStudio
+
+Instructions below.
 
 ## Table of Contents
 
@@ -21,6 +25,7 @@ RStudio: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/b
 - [Data analysis](#data-analysis)
   - [R Markdown](#r-markdown)
   - [Jupyter Notebook](#jupyter-notebook)
+  - [Binder](#binder)
 - [Instructions](#instructions)
   - [Run online with binder](#run-online-with-binder)
   - [Run locally](#run-locally)
@@ -53,12 +58,23 @@ Data analyses were performed with the R computing language, and are provided in 
 - [JupyterLab](http://jupyterlab.readthedocs.io/en/latest/) is produced by [Project Jupyter](http://jupyter.org/). It is most widely used for scientific computing with Python, but supports many programming languages, including R.
 - Jupyter Notebook files enable creation of "reproducible computational narratives" containing Markdown text interspersed with functional code chunks that will run and display output.
 
+### Binder
+
+- [Binder](https://mybinder.org/) turns GitHub repositories into reproducible computing environments. It uses code and dependency files to create Docker images that run in web browsers.
+- Binder supports using R + RStudio, with libraries pinned to a specific snapshot on [MRAN](https://mran.microsoft.com/documents/rro/reproducibility). Binder provides a [GitHub repo](https://github.com/binder-examples/r) as an example
+
 ## Instructions
 
 ### Run online with binder
 
-- [Binder](https://mybinder.org/) turns GitHub repositories into reproducible computing environments. It uses code and dependency files to create Docker images that run in web browsers.
-- Binder supports using R + RStudio, with libraries pinned to a specific snapshot on [MRAN](https://mran.microsoft.com/documents/rro/reproducibility). Binder provides a [GitHub repo](https://github.com/binder-examples/r) as an example
+- JupyterLab
+  - [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=lab) JupyterLab+R
+  - Open [R-proteomics-Nrf1-R.ipynb](R-proteomics-Nrf1-R.ipynb) from within Jupyter Lab.
+  - Run all cells.
+- RStudio
+  - [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=rstudio) RStudio
+  - Open [R-proteomics-Nrf1.Rmd](R-proteomics-Nrf1.Rmd)
+  - Click knit (at the top of the source code viewer)
 
 ### Run locally
 
