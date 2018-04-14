@@ -351,7 +351,6 @@ with(subset(proteomics_data, pvaluechow<.05 & abs(log2_FC_HAchow_lacZ)>1),
 
 ```
 
-
 ### Scatter plot
 
 The scatter plot is an interesting way to visualize two between-group comparisons, but the volcano plot is more useful for this dataset.
@@ -397,11 +396,9 @@ with(subset(proteomics_data, pvalue<.05 & abs(log2_FC_HAchol_HAchow)>1),
 
 ```
 
-
 ## Limitations
 
 ![*Nrf1 proteomics experiment limitations*](img/Slide09.png "Nrf1 proteomics experiment limitations")
-
 
 - We got low and inconsistent protein pulldown with the HA tag immunoprecipitation, and as a result, the proteome was basically the same with (Nrf1-HA adenovirus) or without (lacZ adenovirus) the tagged protein. See HA vs lacZ plot.
 - Cluster analysis in Morpheus revealed that the samples did not cluster by treatment group as expected.
