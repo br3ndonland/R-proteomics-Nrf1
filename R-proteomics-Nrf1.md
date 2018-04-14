@@ -9,6 +9,8 @@ Brendon Smith (br3ndonland)
 -   [Future plans](#future-plans)
 -   [Resources](#resources)
 
+[GitHub](https://github.com/br3ndonland/R-proteomics-Nrf1)
+
 Affinity purification-mass spectrometry to identify the Nrf1 protein complex
 
 Intro
