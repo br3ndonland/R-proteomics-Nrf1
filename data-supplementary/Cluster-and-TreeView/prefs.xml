@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE preferences SYSTEM "http://java.sun.com/dtd/preferences.dtd">
+<preferences EXTERNAL_XML_VERSION="1.0">
+  <root type="user">
+    <map/>
+    <node name="TreeViewApp">
+      <map>
+        <entry key="version" value="0.1.0-alpha"/>
+      </map>
+      <node name="ArrayUrlPresets">
+        <map/>
+        <node name="FlyBase">
+          <map>
+            <entry key="template" value="http://flybase.org/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="GenomeNetEcoli">
+          <map>
+            <entry key="template" value="http://www.genome.jp/dbget/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="Google Scholar">
+          <map>
+            <entry key="template" value="http://scholar.google.com/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="MouseGD">
+          <map>
+            <entry key="template" value="http://www.informatics.jax.org/marker/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="Source_CloneID">
+          <map>
+            <entry key="template" value="source-search.princeton.edu/cgi-bin/source/sourceResult?option=CloneID&amp;choice=Gene&amp;criteria=HEADER"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="WormBase">
+          <map>
+            <entry key="template" value="http://www.wormbase.org/db/searches/basic?class=AnyGene&amp;query=HEADER&amp;Search=Search"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="YPD">
+          <map>
+            <entry key="template" value="http://www.proteome.com/databases/YPD/reports/HEADER.html"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+      </node>
+      <node name="GeneUrlPresets">
+        <map/>
+        <node name="FlyBase">
+          <map>
+            <entry key="template" value="http://flybase.org/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="GenomeNetEcoli">
+          <map>
+            <entry key="template" value="http://www.genome.jp/dbget/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="Google Scholar">
+          <map>
+            <entry key="template" value="http://scholar.google.com/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="MouseGD">
+          <map>
+            <entry key="template" value="http://www.informatics.jax.org/marker/"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="Source_CloneID">
+          <map>
+            <entry key="template" value="source-search.princeton.edu/cgi-bin/source/sourceResult?option=CloneID&amp;choice=Gene&amp;criteria=HEADER"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="WormBase">
+          <map>
+            <entry key="template" value="http://www.wormbase.org/db/searches/basic?class=AnyGene&amp;query=HEADER&amp;Search=Search"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+        <node name="YPD">
+          <map>
+            <entry key="template" value="http://www.proteome.com/databases/YPD/reports/HEADER.html"/>
+            <entry key="enabled" value="false"/>
+            <entry key="header" value="*"/>
+          </map>
+        </node>
+      </node>
+      <node name="TreeViewFrame">
+        <map>
+          <entry key="frame_height" value="741"/>
+          <entry key="lastdir" value="/Users/brendonsmith/OneDrive - Harvard University/Postdoc/Nrf/Nrf1 proteomics/TCMP/20160316 Nrf1-HA mouse liver AP-MS/Cluster and TreeView/"/>
+          <entry key="frame_top" value="23"/>
+          <entry key="frame_width" value="1366"/>
+          <entry key="frame_left" value="0"/>
+        </map>
+        <node name="File">
+          <map/>
+          <node name="Model1">
+            <map>
+              <entry key="colCoord" value="1"/>
+              <entry key="firstLoad" value="false"/>
+              <entry key="rowCoord" value="1"/>
+              <entry key="extension" value=".csv"/>
+              <entry key="delimiter" value=","/>
+              <entry key="name" value="20160316 TCMP Nrf1-HA mouse liver SNR"/>
+            </map>
+            <node name="AtrSummary">
+              <map/>
+            </node>
+            <node name="ColLabelView">
+              <map>
+                <entry key="min" value="11"/>
+                <entry key="size" value="30"/>
+                <entry key="isRightJustified" value="false"/>
+                <entry key="face" value="Courier"/>
+                <entry key="max" value="30"/>
+                <entry key="isFixed" value="false"/>
+              </map>
+              <node name="ColumnSummary">
+                <map>
+                  <entry key="included" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="ColorExtractor">
+              <map>
+                <entry key="logcenter" value="1.0"/>
+              </map>
+            </node>
+            <node name="ColorPresets">
+              <map/>
+              <node name="ColorSet1">
+                <map>
+                  <entry key="empty" value="#FFFFFF"/>
+                  <entry key="Fraction21" value="1.0"/>
+                  <entry key="Color21" value="#FF0000"/>
+                  <entry key="max" value="89.158"/>
+                  <entry key="Color01" value="#0000FF"/>
+                  <entry key="colorNum" value="3"/>
+                  <entry key="missing" value="#8E8E8E"/>
+                  <entry key="Fraction01" value="0.0"/>
+                  <entry key="Fraction11" value="0.5"/>
+                  <entry key="Color11" value="#FFFFFF"/>
+                  <entry key="name" value="Custom"/>
+                  <entry key="min" value="0.088"/>
+                </map>
+              </node>
+            </node>
+            <node name="GlobalXMap">
+              <map>
+                <entry key="minScale" value="64.33333333333333"/>
+                <entry key="XScrollValue" value="0"/>
+                <entry key="scale" value="64.33333333333333"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="64.33333333333333"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="GlobalYMap">
+              <map>
+                <entry key="minScale" value="1.8174603174603174"/>
+                <entry key="YScrollValue" value="0"/>
+                <entry key="scale" value="1.8174603174603174"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="1.8174603174603174"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="GradientChooser">
+              <map>
+                <entry key="activeColors" value="Custom"/>
+              </map>
+            </node>
+            <node name="GtrSummary">
+              <map/>
+            </node>
+            <node name="OverviewXMap">
+              <map>
+                <entry key="minScale" value="9.722222222222221"/>
+                <entry key="scale" value="9.722222222222221"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="9.722222222222221"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="OverviewYMap">
+              <map>
+                <entry key="minScale" value="0.6944444444444444"/>
+                <entry key="scale" value="0.6944444444444444"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="0.6944444444444444"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="RowLabelView">
+              <map>
+                <entry key="min" value="11"/>
+                <entry key="size" value="11"/>
+                <entry key="isRightJustified" value="true"/>
+                <entry key="face" value="Courier"/>
+                <entry key="max" value="30"/>
+                <entry key="isFixed" value="false"/>
+              </map>
+              <node name="RowSummary">
+                <map>
+                  <entry key="included" value="0"/>
+                </map>
+              </node>
+            </node>
+          </node>
+          <node name="Model2">
+            <map>
+              <entry key="colCoord" value="4"/>
+              <entry key="firstLoad" value="false"/>
+              <entry key="rowCoord" value="2"/>
+              <entry key="extension" value=".cdt"/>
+              <entry key="delimiter" value="\t"/>
+              <entry key="name" value="20160316 TCMP Nrf1-HA mouse liver SNR"/>
+            </map>
+            <node name="AtrSummary">
+              <map/>
+            </node>
+            <node name="ColLabelView">
+              <map>
+                <entry key="min" value="11"/>
+                <entry key="size" value="30"/>
+                <entry key="isRightJustified" value="false"/>
+                <entry key="face" value="Courier"/>
+                <entry key="max" value="30"/>
+                <entry key="isFixed" value="false"/>
+              </map>
+              <node name="ColumnSummary">
+                <map>
+                  <entry key="included" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="ColorExtractor">
+              <map>
+                <entry key="logcenter" value="1.0"/>
+              </map>
+            </node>
+            <node name="ColorPresets">
+              <map/>
+            </node>
+            <node name="GlobalXMap">
+              <map>
+                <entry key="minScale" value="64.33333333333333"/>
+                <entry key="scale" value="18"/>
+                <entry key="XScrollValue" value="0"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="64.33333333333333"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="GlobalYMap">
+              <map>
+                <entry key="minScale" value="1.8174603174603174"/>
+                <entry key="scale" value="252"/>
+                <entry key="YScrollValue" value="0"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="1.8174603174603174"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="GtrSummary">
+              <map/>
+            </node>
+            <node name="OverviewXMap">
+              <map>
+                <entry key="minScale" value="9.722222222222221"/>
+                <entry key="scale" value="9.722222222222221"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="9.722222222222221"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="OverviewYMap">
+              <map>
+                <entry key="minScale" value="0.6944444444444444"/>
+                <entry key="scale" value="0.6944444444444444"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="0.6944444444444444"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="RowLabelView">
+              <map>
+                <entry key="min" value="11"/>
+                <entry key="size" value="11"/>
+                <entry key="isRightJustified" value="true"/>
+                <entry key="face" value="Courier"/>
+                <entry key="max" value="30"/>
+                <entry key="isFixed" value="false"/>
+              </map>
+              <node name="RowSummary">
+                <map>
+                  <entry key="included" value="0"/>
+                </map>
+              </node>
+            </node>
+          </node>
+          <node name="Model3">
+            <map>
+              <entry key="colCoord" value="1"/>
+              <entry key="firstLoad" value="false"/>
+              <entry key="rowCoord" value="1"/>
+              <entry key="extension" value=".txt"/>
+              <entry key="delimiter" value="\t"/>
+              <entry key="name" value="20160316 TCMP Nrf1-HA mouse liver SNR"/>
+            </map>
+            <node name="AtrSummary">
+              <map/>
+            </node>
+            <node name="ColLabelView">
+              <map>
+                <entry key="size" value="30"/>
+                <entry key="isRightJustified" value="false"/>
+                <entry key="isFixed" value="false"/>
+              </map>
+              <node name="ColumnSummary">
+                <map>
+                  <entry key="included" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="ColorExtractor">
+              <map>
+                <entry key="logcenter" value="1.0"/>
+              </map>
+            </node>
+            <node name="ColorPresets">
+              <map/>
+            </node>
+            <node name="GlobalXMap">
+              <map>
+                <entry key="minScale" value="64.33333333333333"/>
+                <entry key="scale" value="64.33333333333333"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="64.33333333333333"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="GlobalYMap">
+              <map>
+                <entry key="minScale" value="1.8174603174603174"/>
+                <entry key="scale" value="1.8174603174603174"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="1.8174603174603174"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="GtrSummary">
+              <map/>
+            </node>
+            <node name="OverviewXMap">
+              <map>
+                <entry key="minScale" value="9.722222222222221"/>
+                <entry key="scale" value="9.722222222222221"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="9.722222222222221"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="OverviewYMap">
+              <map>
+                <entry key="minScale" value="0.6944444444444444"/>
+                <entry key="scale" value="0.6944444444444444"/>
+              </map>
+              <node name="FixedMap">
+                <map>
+                  <entry key="type" value="1"/>
+                  <entry key="scale" value="0.6944444444444444"/>
+                </map>
+              </node>
+              <node name="NullMap">
+                <map>
+                  <entry key="type" value="0"/>
+                </map>
+              </node>
+            </node>
+            <node name="RowLabelView">
+              <map>
+                <entry key="size" value="11"/>
+                <entry key="isRightJustified" value="true"/>
+                <entry key="isFixed" value="false"/>
+              </map>
+              <node name="RowSummary">
+                <map>
+                  <entry key="included" value="0"/>
+                </map>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node name="FileMRU">
+          <map/>
+          <node name="File1470854645345">
+            <map>
+              <entry key="dir" value="/Users/brendonsmith/OneDrive - Harvard University/Postdoc/Nrf/Nrf1 proteomics/TCMP/20160316 Nrf1-HA mouse liver AP-MS/"/>
+              <entry key="cdt" value=".csv"/>
+              <entry key="style" value="0"/>
+              <entry key="root" value="20160316 TCMP Nrf1-HA mouse liver SNR"/>
+              <entry key="name" value="No name"/>
+            </map>
+          </node>
+          <node name="File1470858957697">
+            <map>
+              <entry key="dir" value="/Users/brendonsmith/OneDrive - Harvard University/Postdoc/Nrf/Nrf1 proteomics/TCMP/20160316 Nrf1-HA mouse liver AP-MS/"/>
+              <entry key="cdt" value=".cdt"/>
+              <entry key="style" value="0"/>
+              <entry key="root" value="20160316 TCMP Nrf1-HA mouse liver SNR"/>
+              <entry key="name" value="No name"/>
+            </map>
+          </node>
+          <node name="File1470867689386">
+            <map>
+              <entry key="dir" value="/Users/brendonsmith/OneDrive - Harvard University/Postdoc/Nrf/Nrf1 proteomics/TCMP/20160316 Nrf1-HA mouse liver AP-MS/Cluster and TreeView/"/>
+              <entry key="cdt" value=".cdt"/>
+              <entry key="style" value="0"/>
+              <entry key="root" value="20160316 TCMP Nrf1-HA mouse liver SNR"/>
+              <entry key="name" value="No name"/>
+            </map>
+          </node>
+          <node name="File1470867720914">
+            <map>
+              <entry key="dir" value="/Users/brendonsmith/OneDrive - Harvard University/Postdoc/Nrf/Nrf1 proteomics/TCMP/20160316 Nrf1-HA mouse liver AP-MS/Cluster and TreeView/"/>
+              <entry key="cdt" value=".txt"/>
+              <entry key="style" value="0"/>
+              <entry key="root" value="20160316 TCMP Nrf1-HA mouse liver SNR"/>
+              <entry key="name" value="No name"/>
+            </map>
+          </node>
+        </node>
+        <node name="Preferences">
+          <map/>
+          <node name="Preferences">
+            <map/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </root>
+</preferences>
