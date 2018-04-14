@@ -1,6 +1,6 @@
 # README
 
-R proteomics analysis
+Reproducible mass spectrometry data analysis in R
 
 Affinity purification-mass spectrometry to identify the Nrf1 protein complex
 
@@ -8,17 +8,25 @@ Brendon Smith
 
 br3ndonland
 
+[![license](https://img.shields.io/badge/license-CC--BY--4.0%20-blue.svg)](https://choosealicense.com/)
+
+Jupyter+R: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=lab/tree/R-proteomics-Nrf1-R.ipynb)
+
+RStudio: [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=rstudio/tree/R-proteomics-Nrf1.rmd)
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-- [Description](#description)
+- [Scientific background](#scientific-background)
+- [Data analysis](#data-analysis)
   - [R Markdown](#r-markdown)
   - [Jupyter Notebook](#jupyter-notebook)
 - [Instructions](#instructions)
+  - [Run online with binder](#run-online-with-binder)
+  - [Run locally](#run-locally)
 - [Results](#results)
 
-## Introduction
+## Scientific background
 
 This is a summary report of an experiment I performed during my postdoc. The goal of this experiment was to identify a [molecular](https://www.khanacademy.org/science/biology/macromolecules) complex associated with Nrf1, a protein we were studying.
 
@@ -26,15 +34,17 @@ We began studying Nrf1 because it resides in a [cellular organelle](https://yout
 
 We hypothesize that a group of other proteins interacts with Nrf1 to mediate its response to cholesterol at the ER. We used proteomics to test our hypothesis, which identifies all possible proteins in a sample with a technique called mass spectrometry.
 
-## Description
+## Data analysis
 
-Analyses were performed with the R computing language, and are provided in [R Markdown](http://rmarkdown.rstudio.com/) and [Jupyter Notebook](http://jupyter.org/documentation) formats.
+Data analyses were performed with the R computing language, and are provided in [R Markdown](http://rmarkdown.rstudio.com/) and [Jupyter Notebook](http://jupyter.org/documentation) formats.
 
 ### R Markdown
 
 - [R Markdown](http://rmarkdown.rstudio.com/) is a document creation package based on [Markdown](https://www.markdownguide.org/) (syntax for easy generation of formatted HTML documentation), [knitr](http://yihui.name/knitr/) (report generation package) and [pandoc](http://johnmacfarlane.net/pandoc/) (universal document converter).
 - An RMarkdown file contains three types of data: YAML front matter header at the top of the file to specify output methods, Markdown-formatted text, and functional code chunks.
-- I use [RStudio](https://www.rstudio.com/), installed via [Anaconda](https://www.anaconda.com/), to work with R Markdown. I created an [RStudio project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects), which is required for version control and package management.
+- I use [RStudio](https://www.rstudio.com/), installed via [Anaconda](https://www.anaconda.com/), to work with R Markdown.
+- I created an [RStudio project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects), which is required for version control and package management.
+- The R Markdown file outputs in the [GitHub document format](https://rmarkdown.rstudio.com/github_document_format.html) to output standard Markdown, in addition to HTML, for compatibility with GitHub.
 - [Packrat](https://rstudio.github.io/packrat/) was used to manage R packages for the project. [Packrat works with RStudio](https://rstudio.github.io/packrat/rstudio.html) and gives each project its own private package library. R is heavily dependent on its package ecosystem, and Packrat helps avoid problems caused by different package versions and installations.
 
 ### Jupyter Notebook
@@ -45,6 +55,14 @@ Analyses were performed with the R computing language, and are provided in [R Ma
 
 ## Instructions
 
+### Run online with binder
+
+- [Binder](https://mybinder.org/) turns GitHub repositories into reproducible computing environments. It uses code and dependency files to create Docker images that run in web browsers.
+- Binder supports using R + RStudio, with libraries pinned to a specific snapshot on [MRAN](https://mran.microsoft.com/documents/rro/reproducibility). Binder provides a [GitHub repo](https://github.com/binder-examples/r) as an example
+
+### Run locally
+
+- The files in this repository can also be run with RStudio and JupyterLab locally.
 - Install [Anaconda](https://www.anaconda.com/) (including Python and JupyterLab by default). I install Anaconda by direct download, instead of from a Homebrew Cask, for proper configuration of the command prompt.
 - Install R and R essentials from the command line:
 
