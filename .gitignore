@@ -91,3 +91,4 @@ venv.bak/
 .RData
 .Ruserdata
 packrat/lib*/
+rsconnect/
