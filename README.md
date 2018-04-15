@@ -33,11 +33,11 @@ Provided on [GitHub](https://github.com/br3ndonland/R-proteomics-Nrf1) with a CC
 
 What gets me out of bed in the morning is the **power of science to teach us about the world**. It's the most evidence-based thing we have. We use theory and experiment to generate new knowledge.
 
-In science, reproducibility is when different scientists can do the same experiment and get results that agree. **Our current scientific practices do not promote or reward reproducibility**. As a result, the scientific community is experiencing a **reproducibility crisis**, in which the discoveries that we publish can't be reproduced by multiple labs, or even repeated within the same lab by the same person, in some instances. This is not authentic knowledge.
+In science, reproducibility occurs when different scientists do the same experiment and get results that agree. **Our current scientific practices do not promote or reward reproducibility**. As a result, the scientific community is experiencing a **reproducibility crisis**, in which the discoveries that we publish can't be reproduced by multiple labs, or even repeated within the same lab by the same person, in some instances. This is not authentic knowledge.
 
-This is deeply troubling to me. During my postdoc in a large molecular biology lab, I saw the reproducibility crisis unfold, both in the scientific literature and among my colleagues. Even more striking than the crisis itself was the lack of an insightful solution. Rather than transition into an academic position and complain about this for the next forty years, I decided to do something about it. I started building my computational skills, focusing on web development, and I plan to build tools to alleviate some aspects of the reproducibility crisis.
+The reproducibility crisis is troubling to me. During my postdoc in a large molecular biology lab, I saw the reproducibility crisis unfold, both in the scientific literature and among my colleagues. Even more striking than the crisis itself was the lack of an insightful solution. Rather than transition into an academic position and complain about this for the next forty years, I decided to do something about it. I started building my computational skills, focusing on web development, and I plan to build tools to alleviate some aspects of the reproducibility crisis.
 
-**Documentation is the *sine qua non* of reproducibility.** How can we hope to reproduce experiments if we don't know how they were done? Documentation must start at the beginning. Reproducible data analysis must be preceded by reproducible experimental practices. No statistical adjustment can make up for lack of detailed metadata collected at the time the experiment is performed. Clear, annotated raw data should be provided, and data analyses should clearly describe each action taken from raw data to final analysis.
+**Documentation is the *sine qua non* of reproducibility.** How can we hope to reproduce experiments if we don't know how they were done? Documentation must start at the beginning, with reproducible data analysis being preceded by reproducible experimental practices. No statistical adjustment can make up for lack of detailed metadata collected at the time the experiment is performed. Clear, annotated raw data should be provided, and data analyses should clearly describe each action taken from raw data to final analysis.
 
 This repository is a practical example of reproducible scientific data analysis. I have attempted to provide, to the greatest extent possible on GitHub, a complete documentation of the methods that led to the results presented. It's not perfect. There's definitely more I could do, but it's important practice for me and for science.
 
@@ -46,20 +46,20 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 ### Resources
 
 - These papers provide general discussions of reproducibility:
-  - Loscalzo J. Irreproducible Experimental Results: Causes, (Mis)interpretations, and Consequences. *Circulation* 125:1211–1214 (2012). [https://doi.org/10.1161/circulationaha.112.098244](https://doi.org/10.1161/circulationaha.112.098244)
   - Barba LA. The hard road to reproducibility. *Science* 354:142 (2016). [https://doi.org/10.1126/science.354.6308.142](https://doi.org/10.1126/science.354.6308.142)
+  - Loscalzo J. Irreproducible experimental results: Causes, (mis)interpretations, and consequences. *Circulation* 125:1211–1214 (2012). [https://doi.org/10.1161/circulationaha.112.098244](https://doi.org/10.1161/circulationaha.112.098244)
   - Morrison SJ. Time to do something about reproducibility. *eLife* 3:1–4 (2014). [https://doi.org/10.7554/eLife.03981](https://doi.org/10.7554/eLife.03981)
   - Sarewitz D. The pressure to publish pushes down quality. *Nature* 533:147 (2016). [https://doi.org/10.1038/533147a](https://doi.org/10.1038/533147a)
 - The surgeon and writer Atul Gawande wrote a book about his research, in which he found that distributing a checklist (protocol) to surgical team members reduced patient deaths by half. If world-class surgeons can benefit from improved protocols, scientists certainly can also.
   - [The Checklist Manifesto, by Atul Gawande](http://a.co/0SjWYmN)
   - Haynes, AB et al. A surgical safety checklist to reduce morbidity and mortality in a global population. *NEJM* 360:491–499 (2009). [https://doi.org/10.1056/NEJMsa0810119](https://doi.org/10.1056/NEJMsa0810119)
-- This *Cell Reports* commentary a valuable example of the importance of documentation for experimental reproducibility.
+- This *Cell Reports* commentary is a valuable example of the importance of documentation for experimental reproducibility.
   - Hines WC, Su Y, Kuhn I, Polyak K, Bissell MJ. Sorting out the FACS: A devil in the details. *Cell Rep.* 6:779–781 (2014). [https://doi.org/10.1016/j.celrep.2014.02.021](https://doi.org/10.1016/j.celrep.2014.02.021)
 - Research reagents and materials, including antibodies, cell lines, and mice, appear to contribute substantially to lack of reproducibility.
   - Baker M. Reproducibility crisis: Blame it on the antibodies. *Nature* 521:274–276 (2015). [https://doi.org/10.1038/521274a](https://doi.org/10.1038/521274a)
-  - Lorsch JR, Collins FS, Lippincott-Schwartz J. Fixing problems with cell lines: Technologies and policies can improve authentication. *Science* 346:1452–1453 (2014). [https://doi.org/10.1126/science.1259110](https://doi.org/10.1126/science.1259110)
-  - Couzin-Frankel J. When Mice Mislead. *Science* 342:922–925 (2013). [https://doi.org/10.1126/science.342.6161.922](https://doi.org/10.1126/science.342.6161.922)
+  - Couzin-Frankel J. When mice mislead. *Science* 342:922–925 (2013). [https://doi.org/10.1126/science.342.6161.922](https://doi.org/10.1126/science.342.6161.922)
   - Ioannidis JPA. Extrapolating from animals to humans. *Sci. Transl. Med.* 4:151ps15 (2012). [https://doi.org/10.1126/scitranslmed.3004631](https://doi.org/10.1126/scitranslmed.3004631)
+  - Lorsch JR, Collins FS, Lippincott-Schwartz J. Fixing problems with cell lines: Technologies and policies can improve authentication. *Science* 346:1452–1453 (2014). [https://doi.org/10.1126/science.1259110](https://doi.org/10.1126/science.1259110)
   - Martin B, Ji S, Maudsley S, Mattson MP. ‘Control’ laboratory rodents are metabolically morbid: why it matters. *PNAS* 107:6127–6133 (2010). [https://doi.org/10.1073/pnas.0912955107](https://doi.org/10.1073/pnas.0912955107)
 - *Nature* ironically reports on the reproducibility crisis, while continuing to publishing trendy irreproducible articles weekly.
   - Baker M. 1,500 scientists lift the lid on reproducibility. *Nature* 533:452–454 (2016). [https://doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
