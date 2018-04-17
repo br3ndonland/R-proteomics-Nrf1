@@ -75,7 +75,7 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 
 ## Scientific background
 
-This is a summary report of an experiment I performed during my postdoc. The goal of this experiment was to identify a [molecular](https://www.khanacademy.org/science/biology/macromolecules) complex associated with Nrf1, a protein our research group was studying.
+This is a summary report of an experiment I performed during my postdoc. The goal of this experiment was to identify a [molecular](https://www.khanacademy.org/science/biology/macromolecules) complex associated with Nrf1, a protein our research group was studying. Nrf1 is also abbreviated NFE2L1, and should not be confused with Nuclear Respiratory Factor 1.
 
 We began studying Nrf1 because it resides in a [cellular organelle](https://youtu.be/URUJD5NEXC8) called the Endoplasmic Reticulum (ER). We study the ER and its roles in [metabolism](http://learn.genetics.utah.edu/content/metabolism/). We found that Nrf1 mediates the cellular response to cholesterol, and that it seemed to do this separately from its known function as a genetic transcription factor in the nucleus. Cholesterol metabolism occurs at the ER, and is very important in the liver, where cholesterol is metabolized and prepared for excretion.
 
@@ -85,7 +85,7 @@ We hypothesize that a group of other proteins interacts with Nrf1 to mediate its
 
 ## Experimental methods
 
-The experimental methods are summarized in the computational analyses. Supplementary data files, including the electronic lab notebook, protocols, datasheets and information on materials used, raw data, other data analyses, slides, and images, are available in the [data-supplementary](data-supplementary) sub-directory of this repository.
+The experimental methods are summarized in the computational analyses. Supplementary data files, including the electronic lab notebook, protocols, datasheets and information on materials used, raw data, other data analyses, slides, and images, are available in the [data-supplementary sub-directory](data-supplementary) of this repository.
 
 ## Data analysis
 
@@ -93,7 +93,7 @@ The experimental methods are summarized in the computational analyses. Supplemen
 
 Data analysis was performed with the R computing language, is provided in [R Markdown](http://rmarkdown.rstudio.com/) and [Jupyter Notebook](http://jupyter.org/documentation) formats.
 
-These formats both allow a **combination of prose and code**, and promote construction of **reproducible computational narratives** that precisely describe each step in the data analysis, and contain instructions for configuration of the computing environment. When code from a reproducible computational narrative is run on another computer, there is a high probability that the same result will be obtained. Reproducibility.
+These formats both **combine prose and code** to promote construction of **reproducible computational narratives** that configure the computing environment and precisely describe each step in the data analysis. When code from a reproducible computational narrative is run on another computer, there is a high probability that the same result will be obtained. Reproducibility.
 
 As you would guess by the fact that this is on GitHub, the repository is under version control with [Git](https://git-scm.com/doc). I have also used [Git Large File Storage](https://git-lfs.github.com/) (Git LFS) to manage the large supplementary zip archives.
 
@@ -115,7 +115,7 @@ As you would guess by the fact that this is on GitHub, the repository is under v
 ### Binder
 
 - [Binder](https://mybinder.org/) turns GitHub repositories into reproducible computing environments. It uses code and dependency files to create [Docker](https://www.docker.com/) images that run in web browsers.
-- Binder supports using R + RStudio, and provides a [GitHub demo repo](https://github.com/binder-examples/r) as an example of how to run RStudio from Binder. Running R requires [runtime.txt](binder/runtime.txt) to identify a specific snapshot of the CRAN package repository from [MRAN](https://mran.microsoft.com/documents/rro/reproducibility), and [install.R](binder/install.R) to specify R packages to install when the Binder is built. The two files runtime.txt and install.R can be in a [binder](binder) sub-directory.
+- Binder supports using R + RStudio, and provides a [GitHub demo repo](https://github.com/binder-examples/r) as an example of how to run RStudio from Binder. Running R requires [runtime.txt](binder/runtime.txt) to identify a specific snapshot of the CRAN package repository from [MRAN](https://mran.microsoft.com/documents/rro/reproducibility), and [install.R](binder/install.R) to specify R packages to install when the Binder is built. The two files runtime.txt and install.R can be in a [binder sub-directory](binder).
 - **Binder is a potentially great feature, but my experience so far is that it's extremely slow, and not properly loading additional R packages.**
 
 [(Back to TOC)](#table-of-contents)
@@ -138,15 +138,31 @@ As you would guess by the fact that this is on GitHub, the repository is under v
   ```
 
 - [Fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) this repository.
-- Open [R-proteomics-Nrf1.Rproj](R-proteomics-Nrf1.Rproj), or open RStudio and select "Open project."
-- Click "Knit." RStudio will run the code, installing packages locally with Packrat, and will then present R Markdown output. Installation of packages may take some time, and requires an internet connection.
+- To run the R Markdown document:
+  - Open RStudio from the command line:
+
+    ```bash
+    $ rstudio
+    ```
+
+  - Open [R-proteomics-Nrf1.Rproj](R-proteomics-Nrf1.Rproj), or open RStudio and select "Open project."
+  - Click "Knit." RStudio will run the code, installing packages locally with Packrat, and will then present R Markdown output. *Installation of packages may take some time, and requires an internet connection.*
+- To run the Jupyter Notebook document:
+  - Open JupyterLab from the command line:
+
+    ```bash
+    $ jupyter lab
+    ```
+
+  - Open [R-proteomics-Nrf1-R.ipynb](R-proteomics-Nrf1-R.ipynb) from within JupyterLab. I appended "R" to the file name in case I add another file for Python analysis.
+  - Run all cells. Note that JupyterLab beta is having issues with my local R kernel, which is why the notebook file on GitHub does not have code output.
 
 ### Run online with binder
 
 - Again, **Binder is a potentially great feature, but my experience so far is that it's extremely slow, and not properly loading additional R packages.** It seems to have trouble loading the `calibrate` package.
 - JupyterLab
   - [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=lab) JupyterLab+R
-  - Open [R-proteomics-Nrf1-R.ipynb](R-proteomics-Nrf1-R.ipynb) from within Jupyter Lab.
+  - Open [R-proteomics-Nrf1-R.ipynb](R-proteomics-Nrf1-R.ipynb) from within JupyterLab.
   - Run all cells.
 - RStudio
   - [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=rstudio) RStudio

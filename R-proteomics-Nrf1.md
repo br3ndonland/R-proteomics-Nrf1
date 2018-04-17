@@ -16,7 +16,7 @@ Affinity purification-mass spectrometry to identify the Nrf1 protein complex
 Intro
 -----
 
-This is a summary report of an experiment I performed during my postdoc. The goal of this experiment was to identify a [molecular](https://www.khanacademy.org/science/biology/macromolecules) complex associated with Nrf1, a protein molecule we were studying. Nrf1 is also abbreviated NFE2L1, and should not be confused with Nuclear Respiratory Factor 1.
+This is a summary report of an experiment I performed during my postdoc. The goal of this experiment was to identify a [molecular](https://www.khanacademy.org/science/biology/macromolecules) complex associated with Nrf1, a protein molecule our research group was studying. Nrf1 is also abbreviated NFE2L1, and should not be confused with Nuclear Respiratory Factor 1.
 
 We began studying Nrf1 because it resides on a [cellular organelle](https://youtu.be/URUJD5NEXC8) called the Endoplasmic Reticulum (ER). We study the ER and its roles in [metabolism](http://learn.genetics.utah.edu/content/metabolism/). We found that Nrf1 mediates the cellular response to cholesterol, and that it seemed to do this separately from its known function as a genetic transcription factor in the nucleus. Cholesterol metabolism occurs at the ER, and is very important in the liver, where cholesterol is metabolized and prepared for excretion.
 
@@ -37,7 +37,7 @@ Mice were handled in compliance with all ethical guidelines.
 
 ### Diets and treatments
 
-We then fed the mice their standard chow diet, or a Paigen diet which contains additional ingredients to promote accumulation of cholesterol in the liver. We also had a group of mice that received treatment with the drug Bortezomib, as a positive control for Nrf1 activation. Bortezomib, a proteasome inhibitor, is a compound known to activate the genetic transcriptional functions of Nrf1.
+We then fed the mice their standard chow diet, or a Paigen diet which contains additional ingredients to promote accumulation of cholesterol in the liver. We also had a group of mice that received treatment with the drug Bortezomib, as a positive control for Nrf1 activation. Bortezomib is a pharmaceutical compound known to activate the genetic transcriptional functions of Nrf1 by inhibiting the proteasome.
 
 ### Liver ER fraction and HA IP
 
