@@ -19,6 +19,7 @@ Provided on [GitHub](https://github.com/br3ndonland/R-proteomics-Nrf1) with a CC
 - [Scientific background](#scientific-background)
 - [Experimental methods](#experimental-methods)
 - [Data analysis](#data-analysis)
+  - [Intro](#intro)
   - [R Markdown](#r-markdown)
   - [Jupyter Notebook](#jupyter-notebook)
   - [Binder](#binder)
@@ -39,7 +40,7 @@ The reproducibility crisis is troubling to me. During my postdoc in a large mole
 
 **Documentation is the *sine qua non* of reproducibility.** How can we hope to reproduce experiments if we don't know how they were done? Documentation must start at the beginning, with reproducible data analysis being preceded by reproducible experimental practices. No statistical adjustment can make up for lack of detailed metadata collected at the time the experiment is performed. Clear, annotated raw data should be provided, and data analyses should clearly describe each action taken from raw data to final analysis.
 
-This repository is a practical example of reproducible scientific data analysis. I have attempted to provide, to the greatest extent possible on GitHub, a complete documentation of the methods that led to the results presented. It's not perfect. There's definitely more I could do, but it's important practice for me and for science.
+This repository is a practical example of reproducible scientific data analysis. I have attempted to provide, to the greatest extent possible on GitHub, a complete documentation of the methods that led to the results presented. It's not perfect. The information is not complete, as I worked with others who don't care about documenting their work. There's definitely more I could do on the data analysis side also. **Some aspects of the experiment didn't work well, but that's the point. Experiments don't usually turn out exactly according to plan. By carefully documenting the methods, and sharing the results transparently, I can see exactly what went wrong, and how to move forward in the most efficient way. That's how science should be.**
 
 It might seem strange to my scientific colleagues, who are mostly focused on career advancement and personal aggrandizement, that I would take so much time to analyze preliminary data from a pilot study like this. **It's not just about the end result. If we want to address the reproducibility crisis, we need to focus on the process.**
 
@@ -60,7 +61,7 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
   - Couzin-Frankel J. When mice mislead. *Science* 342:922–925 (2013). [https://doi.org/10.1126/science.342.6161.922](https://doi.org/10.1126/science.342.6161.922)
   - Ioannidis JPA. Extrapolating from animals to humans. *Sci. Transl. Med.* 4:151ps15 (2012). [https://doi.org/10.1126/scitranslmed.3004631](https://doi.org/10.1126/scitranslmed.3004631)
   - Lorsch JR, Collins FS, Lippincott-Schwartz J. Fixing problems with cell lines: Technologies and policies can improve authentication. *Science* 346:1452–1453 (2014). [https://doi.org/10.1126/science.1259110](https://doi.org/10.1126/science.1259110)
-  - Martin B, Ji S, Maudsley S, Mattson MP. ‘Control’ laboratory rodents are metabolically morbid: why it matters. *PNAS* 107:6127–6133 (2010). [https://doi.org/10.1073/pnas.0912955107](https://doi.org/10.1073/pnas.0912955107)
+  - Martin B, Ji S, Maudsley S, Mattson MP. ‘Control’ laboratory rodents are metabolically morbid: Why it matters. *PNAS* 107:6127–6133 (2010). [https://doi.org/10.1073/pnas.0912955107](https://doi.org/10.1073/pnas.0912955107)
 - *Nature* ironically reports on the reproducibility crisis, while continuing to publishing trendy irreproducible articles weekly.
   - Baker M. 1,500 scientists lift the lid on reproducibility. *Nature* 533:452–454 (2016). [https://doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
   - Shen H. Interactive notebooks: Sharing the code. *Nature* 515:151–2 (2014). [https://doi.org/10.1038/515151a](https://doi.org/10.1038/515151a)
@@ -68,6 +69,7 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 - [Data Carpentry](http://www.datacarpentry.org/), which is sponsored by [NumFOCUS](https://www.numfocus.org/), has a [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum) and holds workshops on reproducible data analysis in Python and R.
 - The Harvard [Institute for Applied Computational Science (IACS)](https://iacs.seas.harvard.edu/) provides free resources to the scientific computing community, such as the annual [Computefest](https://computefest.seas.harvard.edu/). See *EDA.ipynb* and *grammarofdata.ipynb* from [Computefest 2018](https://github.com/Harvard-IACS/computefest2018-pandas) for info on reproducible Exploratory Data Analysis (EDA) workflows.
 - Vincent Carey (Harvard Medical School, Brigham & Women's Hospital) provided helpful [resources](https://github.com/vjcitn/Repro2017) for reproducible data analyses associated with his Repro2017 Harvard Catalyst talk.
+- The citation style used above is my own custom style that I used in my [dissertation](http://hdl.handle.net/2142/72961). It combines aspects of the Nature and BioMed Central (BMC) styles. The style is informative, concise, and light on punctuation and formatting.
 
 [(Back to TOC)](#table-of-contents)
 
@@ -83,13 +85,17 @@ We hypothesize that a group of other proteins interacts with Nrf1 to mediate its
 
 ## Experimental methods
 
-The experimental methods are summarized in the computational analyses. Supplementary data, including the electronic lab notebook, raw data, other data analyses, and PowerPoint slides, are available in the [data-supplementary](data-supplementary) sub-directory of this repository.
+The experimental methods are summarized in the computational analyses. Supplementary data files, including the electronic lab notebook, protocols, datasheets and information on materials used, raw data, other data analyses, slides, and images, are available in the [data-supplementary](data-supplementary) sub-directory of this repository.
 
 ## Data analysis
 
-Data analyses were performed with the R computing language, and are provided in [R Markdown](http://rmarkdown.rstudio.com/) and [Jupyter Notebook](http://jupyter.org/documentation) formats.
+### Intro
 
-These formats both allow a **combination of prose and code,** and promote construction of **reproducible computational narratives** that precisely describe each step in the data analysis. When code from a reproducible computational narrative is run on another computer, there is a high probability that the same result will be obtained. Reproducibility.
+Data analysis was performed with the R computing language, is provided in [R Markdown](http://rmarkdown.rstudio.com/) and [Jupyter Notebook](http://jupyter.org/documentation) formats.
+
+These formats both allow a **combination of prose and code**, and promote construction of **reproducible computational narratives** that precisely describe each step in the data analysis, and contain instructions for configuration of the computing environment. When code from a reproducible computational narrative is run on another computer, there is a high probability that the same result will be obtained. Reproducibility.
+
+As you would guess by the fact that this is on GitHub, the repository is under version control with [Git](https://git-scm.com/doc). I have also used [Git Large File Storage](https://git-lfs.github.com/) (Git LFS) to manage the large supplementary zip archives.
 
 ### R Markdown
 
@@ -97,7 +103,6 @@ These formats both allow a **combination of prose and code,** and promote constr
 - An RMarkdown file contains three types of data: YAML front matter header at the top of the file to specify output methods, Markdown-formatted text, and functional code chunks.
 - I use [RStudio](https://www.rstudio.com/), installed via [Anaconda](https://www.anaconda.com/), to work with R Markdown.
 - I created an [RStudio project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects), which is required for version control and package management.
-- As you would guess by the fact that this is on GitHub, the repository is under version control with [Git](https://git-scm.com/doc).
 - The R Markdown file outputs in the [GitHub document format](https://rmarkdown.rstudio.com/github_document_format.html) to output standard Markdown, in addition to HTML, for compatibility with GitHub.
 - [Packrat](https://rstudio.github.io/packrat/) was used to manage R packages for the project. [Packrat works with RStudio](https://rstudio.github.io/packrat/rstudio.html) and gives each project its own private package library. R is heavily dependent on its package ecosystem, and Packrat helps avoid problems caused by different package versions and installations.
 
@@ -105,7 +110,7 @@ These formats both allow a **combination of prose and code,** and promote constr
 
 - Jupyter Notebook files are run in JupyterLab, which is installed by default with Anaconda. JupyterLab was previously Jupyter Notebook.
 - [JupyterLab](http://jupyterlab.readthedocs.io/en/latest/) is a development environment produced by [Project Jupyter](http://jupyter.org/). It is most widely used for scientific computing with Python, but supports many programming languages, including R.
-- Jupyter Notebook files enable creation of reproducible computational narratives containing Markdown text interspersed with functional code chunks that will run and display output.
+- Jupyter Notebook files enable creation of reproducible computational narratives, containing Markdown text interspersed with functional code chunks.
 
 ### Binder
 
@@ -133,7 +138,7 @@ These formats both allow a **combination of prose and code,** and promote constr
   $ conda install rstudio
   ```
 
-- [Fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) [this repository](https://github.com/br3ndonland/R-proteomics-Nrf1).
+- [Fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) this repository.
 - Open [R-proteomics-Nrf1.Rproj](R-proteomics-Nrf1.Rproj), or open RStudio and select "Open project."
 - Click "Knit." RStudio will run the code, installing packages locally with Packrat, and will then present R Markdown output. Installation of packages may take some time, and requires an internet connection.
 
@@ -148,7 +153,7 @@ These formats both allow a **combination of prose and code,** and promote constr
   - [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-Nrf1/master?urlpath=rstudio) RStudio
   - Open [R-proteomics-Nrf1.Rmd](R-proteomics-Nrf1.Rmd) from within RStudio.
   - Click knit (at the top of the source code viewer).
-  - The RStudio project file [R-proteomics-Nrf1.Rproj](R-proteomics-Nrf1.Rproj) can also be opened from within Binder RStudio, though I would discourage this. *Beware:* RStudio in Binder will recognize the Packrat library associated with the project, and will attempt to install all required packages. It could take up to an hour, in which time you could have already installed Anaconda, R, and RStudio on your computer.
+  - The RStudio project file [R-proteomics-Nrf1.Rproj](R-proteomics-Nrf1.Rproj) can also be opened from within Binder RStudio, though I would discourage this. *Beware:* RStudio in Binder will recognize the Packrat library associated with the project, and will attempt to install all required packages. Package installation doesn't seem to work correctly within the Binder. It could take over an hour to install all the packages, in which time you could have already installed Anaconda, R, and RStudio on your computer, run the analysis, and gotten groceries.
 
 ## Results
 
