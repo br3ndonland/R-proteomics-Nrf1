@@ -179,9 +179,10 @@ with(proteomics_data,
        xlim=c(-2,2),
        ylim=c(0,3),
        yaxp=c(0,3,3),
-       main="Nrf1 AP-MS volcano plot cholesterol vs chow",
+       main="Cholesterol-induced Nrf1 interacting proteins",
        xlab="log2(FC HA chol/HA chow)",
-       ylab="-log10(pvalue HA chol vs HA chow)"
+       ylab="-log10(pvalue HA chol vs HA chow)",
+       family="Raleway"
        )
      )
 
@@ -226,7 +227,8 @@ with(subset(proteomics_data, pvalue<.05 & abs(log2_FC_HAchol_HAchow)>1),
        log2_FC_HAchol_HAchow,
        -log10(pvalue),
        labs=Gene,
-       cex=1
+       cex=1,
+       family="Raleway"
        )
      )
 ```
