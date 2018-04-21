@@ -75,6 +75,7 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 - [Gigantum](http://gigantum.io/): Research project management and collaboration system. It version-controls your research materials, allows them to be easily shared and published, and bundles everything to run reproducibly in the cloud. Very cool.
 - [Greene Integrative Genomics Laboratory at Penn](http://www.greenelab.com/): Bioinformatics lab that uses sophisticated methods to ensure transparent and computationally reproducible research. Also check out their [GitHub](https://github.com/greenelab/).
 - [Open Science Framework](https://cos.io/our-products/open-science-framework/): Research project management and collaboration system. Integrates many other software tools and forms of data.
+- [Protocols.io](https://www.protocols.io/): Open access repository for creation and sharing of scientific protocols.
 - [sciNote](https://scinote.net/): Free electronic lab notebook.
 - [Stencila](https://stenci.la/): Open document suite that can be used to write and run code in a computationally reproducible way. I recently attended an eLife webinar about Stencila. eLife is [considering](https://elifesciences.org/for-the-press/e6038800/elife-supports-development-of-open-technology-stack-for-publishing-reproducible-manuscripts-online) Stencila as part of a "Reproducible Document Stack" to generate their manuscripts.
 - [We-Sci](http://www.we-sci.com/): Tool to ensure proper attribution for scientific work.
