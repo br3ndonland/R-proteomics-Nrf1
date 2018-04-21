@@ -6,7 +6,7 @@ Brendon Smith
 
 br3ndonland
 
-[![license](https://img.shields.io/badge/license-CC--BY--4.0%20-blue.svg)](https://choosealicense.com/)
+[![license](https://img.shields.io/badge/license-CC--BY--4.0%20-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 Provided on [GitHub](https://github.com/br3ndonland/R-proteomics-Nrf1) with a CC-BY-4.0 license, which is commonly used for open-access scientific publications. I encourage you to use the materials in this repository for your own work. If you use this material, please **attribute me** and **explain what you changed**.
 
@@ -46,6 +46,8 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 
 ### Resources
 
+#### Papers
+
 - These papers provide general discussions of reproducibility:
   - Barba LA. The hard road to reproducibility. *Science* 354:142 (2016). [https://doi.org/10.1126/science.354.6308.142](https://doi.org/10.1126/science.354.6308.142)
   - Loscalzo J. Irreproducible experimental results: Causes, (mis)interpretations, and consequences. *Circulation* 125:1211–1214 (2012). [https://doi.org/10.1161/circulationaha.112.098244](https://doi.org/10.1161/circulationaha.112.098244)
@@ -61,15 +63,29 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
   - Couzin-Frankel J. When mice mislead. *Science* 342:922–925 (2013). [https://doi.org/10.1126/science.342.6161.922](https://doi.org/10.1126/science.342.6161.922)
   - Ioannidis JPA. Extrapolating from animals to humans. *Sci. Transl. Med.* 4:151ps15 (2012). [https://doi.org/10.1126/scitranslmed.3004631](https://doi.org/10.1126/scitranslmed.3004631)
   - Lorsch JR, Collins FS, Lippincott-Schwartz J. Fixing problems with cell lines: Technologies and policies can improve authentication. *Science* 346:1452–1453 (2014). [https://doi.org/10.1126/science.1259110](https://doi.org/10.1126/science.1259110)
-  - Martin B, Ji S, Maudsley S, Mattson MP. ‘Control’ laboratory rodents are metabolically morbid: Why it matters. *PNAS* 107:6127–6133 (2010). [https://doi.org/10.1073/pnas.0912955107](https://doi.org/10.1073/pnas.0912955107)
+  - Martin B, Ji S, Maudsley S, Mattson MP. 'Control' laboratory rodents are metabolically morbid: Why it matters. *PNAS* 107:6127–6133 (2010). [https://doi.org/10.1073/pnas.0912955107](https://doi.org/10.1073/pnas.0912955107)
+- The scientific journal *eLife* is a leader in reproducible data analysis and publishing. I particularly enjoy the [eLife Labs blog](https://elifesciences.org/labs).
 - *Nature* ironically reports on the reproducibility crisis, while continuing to publishing trendy irreproducible articles weekly.
   - Baker M. 1,500 scientists lift the lid on reproducibility. *Nature* 533:452–454 (2016). [https://doi.org/10.1038/533452a](https://doi.org/10.1038/533452a)
   - Shen H. Interactive notebooks: Sharing the code. *Nature* 515:151–2 (2014). [https://doi.org/10.1038/515151a](https://doi.org/10.1038/515151a)
-- The scientific journal *eLife* is a leader in reproducible data analysis and publishing. I particularly enjoy the [eLife Labs blog](https://elifesciences.org/labs).
+- The citation style used above is my own custom style that I used in my [dissertation](http://hdl.handle.net/2142/72961). It combines aspects of the Nature and BioMed Central (BMC) styles. The style is informative, concise, and light on punctuation and formatting.
+
+#### Tools
+
+- [Gigantum](http://gigantum.io/): Research project management and collaboration system. It version-controls your research materials, allows them to be easily shared and published, and bundles everything to run reproducibly in the cloud. Very cool.
+- [Greene Integrative Genomics Laboratory at Penn](http://www.greenelab.com/): Bioinformatics lab that uses sophisticated methods to ensure transparent and computationally reproducible research. Also check out their [GitHub](https://github.com/greenelab/).
+- [Open Science Framework](https://cos.io/our-products/open-science-framework/): Research project management and collaboration system. Integrates many other software tools and forms of data.
+- [sciNote](https://scinote.net/): Free electronic lab notebook.
+- [Stencila](https://stenci.la/): Open document suite that can be used to write and run code in a computationally reproducible way. I recently attended an eLife webinar about Stencila. eLife is [considering](https://elifesciences.org/for-the-press/e6038800/elife-supports-development-of-open-technology-stack-for-publishing-reproducible-manuscripts-online) Stencila as part of a "Reproducible Document Stack" to generate their manuscripts.
+- [We-Sci](http://www.we-sci.com/): Tool to ensure proper attribution for scientific work.
+- [Whole Tale](http://wholetale.org/): Research project management system.
+- [Zenodo](https://zenodo.org/): Repository for digital materials to be permanently archived and stored with DOI versioning.
+
+#### Workshops
+
 - [Data Carpentry](http://www.datacarpentry.org/), which is sponsored by [NumFOCUS](https://www.numfocus.org/), has a [Reproducible Science Curriculum](https://github.com/Reproducible-Science-Curriculum) and holds workshops on reproducible data analysis in Python and R.
 - The Harvard [Institute for Applied Computational Science (IACS)](https://iacs.seas.harvard.edu/) provides free resources to the scientific computing community, such as the annual [Computefest](https://computefest.seas.harvard.edu/). See *EDA.ipynb* and *grammarofdata.ipynb* from [Computefest 2018](https://github.com/Harvard-IACS/computefest2018-pandas) for info on reproducible Exploratory Data Analysis (EDA) workflows.
 - Vincent Carey (Harvard Medical School, Brigham & Women's Hospital) provided helpful [resources](https://github.com/vjcitn/Repro2017) for reproducible data analyses associated with his Repro2017 Harvard Catalyst talk.
-- The citation style used above is my own custom style that I used in my [dissertation](http://hdl.handle.net/2142/72961). It combines aspects of the Nature and BioMed Central (BMC) styles. The style is informative, concise, and light on punctuation and formatting.
 
 [(Back to TOC)](#table-of-contents)
 
@@ -172,7 +188,7 @@ As you would guess by the fact that this is on GitHub, the repository is under v
 
 ## Results
 
-![Volcano plot from R analysis comparing proteins in cholesterol-fed vs chow-fed liver](img/volcano-plot-chol.png)
+![Volcano plot from R analysis comparing proteins in cholesterol-fed vs chow-fed liver](img/r-proteomics-nrf1-volcano.png)
 
 Complement C1q proteins A, B, C (green dots in the plot above) were identified as potentially interacting with Nrf1 in the setting of liver cholesterol accumulation. The experiment did have notable limitations, which prompted us to refine our methods and continue with further experiments.
 
