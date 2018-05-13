@@ -48,14 +48,18 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 
 #### Papers
 
+- NPR correspondent Richard Harris sums up the reproducibility crisis in his book Rigor Mortis.
+  - [Rigor Mortis: How Sloppy Science Creates Worthless Cures, Crushes Hope, and Wastes Billions, by Richard Harris](http://a.co/5uQDILy)
+  - [Retraction Watch interview with Rigor Mortis author Richard Harris](https://retractionwatch.com/2017/04/04/failure-essential-part-science-qa-author-new-book-reproducibility/)
+  - [Recorded livestream discussion at NYU](https://livestream.com/accounts/17645697/events/7229448/videos/153465413)
+- The surgeon and writer Atul Gawande wrote a book about his research, in which he found that distributing a checklist (protocol) to surgical team members reduced patient deaths by half. If world-class surgeons can benefit from improved protocols, scientists certainly can also.
+  - [The Checklist Manifesto, by Atul Gawande](http://a.co/0SjWYmN)
+  - Haynes, AB et al. A surgical safety checklist to reduce morbidity and mortality in a global population. *NEJM* 360:491–499 (2009). [https://doi.org/10.1056/NEJMsa0810119](https://doi.org/10.1056/NEJMsa0810119)
 - These papers provide general discussions of reproducibility:
   - Barba LA. The hard road to reproducibility. *Science* 354:142 (2016). [https://doi.org/10.1126/science.354.6308.142](https://doi.org/10.1126/science.354.6308.142)
   - Loscalzo J. Irreproducible experimental results: Causes, (mis)interpretations, and consequences. *Circulation* 125:1211–1214 (2012). [https://doi.org/10.1161/circulationaha.112.098244](https://doi.org/10.1161/circulationaha.112.098244)
   - Morrison SJ. Time to do something about reproducibility. *eLife* 3:1–4 (2014). [https://doi.org/10.7554/eLife.03981](https://doi.org/10.7554/eLife.03981)
   - Sarewitz D. The pressure to publish pushes down quality. *Nature* 533:147 (2016). [https://doi.org/10.1038/533147a](https://doi.org/10.1038/533147a)
-- The surgeon and writer Atul Gawande wrote a book about his research, in which he found that distributing a checklist (protocol) to surgical team members reduced patient deaths by half. If world-class surgeons can benefit from improved protocols, scientists certainly can also.
-  - [The Checklist Manifesto, by Atul Gawande](http://a.co/0SjWYmN)
-  - Haynes, AB et al. A surgical safety checklist to reduce morbidity and mortality in a global population. *NEJM* 360:491–499 (2009). [https://doi.org/10.1056/NEJMsa0810119](https://doi.org/10.1056/NEJMsa0810119)
 - This *Cell Reports* commentary is a valuable example of the importance of documentation for experimental reproducibility.
   - Hines WC, Su Y, Kuhn I, Polyak K, Bissell MJ. Sorting out the FACS: A devil in the details. *Cell Rep.* 6:779–781 (2014). [https://doi.org/10.1016/j.celrep.2014.02.021](https://doi.org/10.1016/j.celrep.2014.02.021)
 - Research reagents and materials, including antibodies, cell lines, and mice, appear to contribute substantially to lack of reproducibility.
@@ -110,7 +114,7 @@ The experimental methods are summarized in the computational analyses. Supplemen
 
 ### Intro
 
-Data analysis was performed with the R computing language, is provided in [R Markdown](http://rmarkdown.rstudio.com/) and [Jupyter Notebook](http://jupyter.org/documentation) formats.
+Data analysis was performed with the R computing language, and is provided in [R Markdown](http://rmarkdown.rstudio.com/) and [Jupyter Notebook](http://jupyter.org/documentation) formats.
 
 These formats both **combine prose and code** to promote construction of **reproducible computational narratives** that configure the computing environment and precisely describe each step in the data analysis. When code from a reproducible computational narrative is run on another computer, there is a high probability that the same result will be obtained. Reproducibility.
 
