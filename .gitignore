@@ -92,6 +92,9 @@ venv.bak/
 .Ruserdata
 packrat/lib*/
 rsconnect/
+
+# My gitignores
+.DS_Store
 Gels-and-blots/
 Mass-spec-TCMP/
 Materials/

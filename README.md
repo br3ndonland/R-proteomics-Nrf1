@@ -4,19 +4,18 @@ Reproducible proteomic mass spectrometry data analysis in R
 
 Brendon Smith
 
-br3ndonland
+[br3ndonland](https://github.com/br3ndonland)
 
-[![license](https://img.shields.io/badge/license-CC--BY--4.0%20-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![license](https://img.shields.io/badge/license-CC--BY--4.0%20-blue.svg?longCache=true&style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 
 Provided on [GitHub](https://github.com/br3ndonland/R-proteomics-Nrf1) with a CC-BY-4.0 license, which is commonly used for open-access scientific publications. I encourage you to use the materials in this repository for your own work. If you use this material, please **attribute me** and **explain what you changed**.
 
-## Table of Contents
+## Table of Contents <!-- omit in toc -->
 
-- [Table of Contents](#table-of-contents)
+- [Scientific background](#scientific-background)
 - [Reproducibility](#reproducibility)
   - [Comments](#comments)
   - [Resources](#resources)
-- [Scientific background](#scientific-background)
 - [Experimental methods](#experimental-methods)
 - [Data analysis](#data-analysis)
   - [Intro](#intro)
@@ -28,19 +27,31 @@ Provided on [GitHub](https://github.com/br3ndonland/R-proteomics-Nrf1) with a CC
   - [Run online with binder](#run-online-with-binder)
 - [Results](#results)
 
+## Scientific background
+
+This is a summary report of an experiment I performed during my postdoc. The goal of this experiment was to identify a [molecular](https://www.khanacademy.org/science/biology/macromolecules) complex associated with Nrf1, a protein our research group was studying. Nrf1 is also abbreviated NFE2L1, and should not be confused with Nuclear Respiratory Factor 1.
+
+We began studying Nrf1 because it resides in a [cellular organelle](https://youtu.be/URUJD5NEXC8) called the Endoplasmic Reticulum (ER). We study the ER and its roles in [metabolism](http://learn.genetics.utah.edu/content/metabolism/). We found that Nrf1 mediates the cellular response to cholesterol, and that it seemed to do this separately from its known function as a genetic transcription factor in the nucleus. Cholesterol metabolism occurs at the ER, and is very important in the liver, where cholesterol is metabolized and prepared for excretion.
+
+We hypothesize that a group of other proteins interacts with Nrf1 to mediate its response to cholesterol at the ER. We used proteomics to test our hypothesis, which identifies all possible proteins in a sample with a technique called mass spectrometry.
+
+I incorporated practices for reproducible scientific experimentation and data analysis throughout the project.
+
+[(Back to top)](#top)
+
 ## Reproducibility
 
 ### Comments
 
-What gets me out of bed in the morning is the **power of science to teach us about the world**. It's the most evidence-based thing we have. We use theory and experiment to generate new knowledge.
+Science is an incredible tool for learning about the world. We use theory and experiment to generate new knowledge. In science, reproducibility occurs when different scientists do the same experiment and get results that agree. **Our current scientific practices do not promote or reward reproducibility**. As a result, the scientific community is experiencing a **reproducibility crisis**, in which the discoveries that we publish can't be reproduced by multiple labs, or even repeated within the same lab by the same person, in some instances. This is not authentic knowledge.
 
-In science, reproducibility occurs when different scientists do the same experiment and get results that agree. **Our current scientific practices do not promote or reward reproducibility**. As a result, the scientific community is experiencing a **reproducibility crisis**, in which the discoveries that we publish can't be reproduced by multiple labs, or even repeated within the same lab by the same person, in some instances. This is not authentic knowledge.
-
-The reproducibility crisis is troubling to me. During my postdoc in a large molecular biology lab, I saw the reproducibility crisis unfold, both in the scientific literature and among my colleagues. Even more striking than the crisis itself was the lack of an insightful solution. Rather than transition into an academic position and complain about this for the next forty years, I decided to do something about it. I started building my computational skills, focusing on web development, and I plan to build tools to alleviate some aspects of the reproducibility crisis.
+The reproducibility crisis is troubling. During my postdoc in a large molecular biology lab, I saw the reproducibility crisis unfold, both in the scientific literature and among my colleagues. Even more striking than the crisis itself was the lack of an insightful solution.
 
 **Documentation is the *sine qua non* of reproducibility.** How can we hope to reproduce experiments if we don't know how they were done? Documentation must start at the beginning, with reproducible data analysis being preceded by reproducible experimental practices. No statistical adjustment can make up for lack of detailed metadata collected at the time the experiment is performed. Clear, annotated raw data should be provided, and data analyses should clearly describe each action taken from raw data to final analysis.
 
-This repository is a practical example of reproducible scientific data analysis. I have attempted to provide, to the greatest extent possible on GitHub, a complete documentation of the methods that led to the results presented. It's not perfect. The information is not complete, as I worked with others who don't care about documenting their work. There's definitely more I could do on the data analysis side also. **Some aspects of the experiment didn't work well, but that's the point. Experiments don't usually turn out exactly according to plan. By carefully documenting the methods, and sharing the results transparently, I can see exactly what went wrong, and how to move forward in the most efficient way. That's how science should be.**
+This repository is a practical example of reproducible scientific data analysis. I have attempted to provide, to the greatest extent possible on GitHub, a complete documentation of the methods that led to the results presented. It's not perfect. The information is not complete, as I worked with others who don't care about documenting their work. There's definitely more I could do on the data analysis side also. Some aspects of the experiment didn't work well, but that's the point. Experiments don't usually turn out exactly according to plan. **By carefully documenting the methods, and sharing the results transparently, I can see exactly what went wrong, and how to move forward in the most efficient way. That's how science should be.**
+
+Rather than transition into an academic position and complain about this for the next forty years, I decided to do something about it. I started building my computational skills, focusing on web development, and I hope to build tools to alleviate some aspects of the reproducibility crisis.
 
 It might seem strange to my scientific colleagues, who are mostly focused on career advancement and personal aggrandizement, that I would take so much time to analyze preliminary data from a pilot study like this. **It's not just about the end result. If we want to address the reproducibility crisis, we need to focus on the process.**
 
@@ -94,17 +105,7 @@ It might seem strange to my scientific colleagues, who are mostly focused on car
 - The Harvard [Institute for Applied Computational Science (IACS)](https://iacs.seas.harvard.edu/) provides free resources to the scientific computing community, such as the annual [Computefest](https://computefest.seas.harvard.edu/). See *EDA.ipynb* and *grammarofdata.ipynb* from [Computefest 2018](https://github.com/Harvard-IACS/computefest2018-pandas) for info on reproducible Exploratory Data Analysis (EDA) workflows.
 - Vincent Carey (Harvard Medical School, Brigham & Women's Hospital) provided helpful [resources](https://github.com/vjcitn/Repro2017) for reproducible data analyses associated with his Repro2017 Harvard Catalyst talk.
 
-[(Back to TOC)](#table-of-contents)
-
-## Scientific background
-
-This is a summary report of an experiment I performed during my postdoc. The goal of this experiment was to identify a [molecular](https://www.khanacademy.org/science/biology/macromolecules) complex associated with Nrf1, a protein our research group was studying. Nrf1 is also abbreviated NFE2L1, and should not be confused with Nuclear Respiratory Factor 1.
-
-We began studying Nrf1 because it resides in a [cellular organelle](https://youtu.be/URUJD5NEXC8) called the Endoplasmic Reticulum (ER). We study the ER and its roles in [metabolism](http://learn.genetics.utah.edu/content/metabolism/). We found that Nrf1 mediates the cellular response to cholesterol, and that it seemed to do this separately from its known function as a genetic transcription factor in the nucleus. Cholesterol metabolism occurs at the ER, and is very important in the liver, where cholesterol is metabolized and prepared for excretion.
-
-We hypothesize that a group of other proteins interacts with Nrf1 to mediate its response to cholesterol at the ER. We used proteomics to test our hypothesis, which identifies all possible proteins in a sample with a technique called mass spectrometry.
-
-[(Back to TOC)](#table-of-contents)
+[(Back to top)](#top)
 
 ## Experimental methods
 
@@ -141,7 +142,7 @@ As you would guess by the fact that this is on GitHub, the repository is under v
 - Binder supports using R + RStudio, and provides a [GitHub demo repo](https://github.com/binder-examples/r) as an example of how to run RStudio from Binder. Running R requires [runtime.txt](binder/runtime.txt) to identify a specific snapshot of the CRAN package repository from [MRAN](https://mran.microsoft.com/documents/rro/reproducibility), and [install.R](binder/install.R) to specify R packages to install when the Binder is built. The two files runtime.txt and install.R can be in a [binder sub-directory](binder).
 - **Binder is a potentially great feature, but my experience so far is that it's extremely slow, and not properly loading additional R packages.**
 
-[(Back to TOC)](#table-of-contents)
+[(Back to top)](#top)
 
 ## Instructions
 
@@ -199,4 +200,4 @@ As you would guess by the fact that this is on GitHub, the repository is under v
 
 Complement C1q proteins A, B, C (green dots in the plot above) were identified as potentially interacting with Nrf1 in the setting of liver cholesterol accumulation. The experiment did have notable limitations, which prompted us to refine our methods and continue with further experiments.
 
-[(Back to TOC)](#table-of-contents)
+[(Back to top)](#top)
