@@ -205,7 +205,7 @@ If running the Jupyter notebook file locally, I would suggest using JupyterLab w
 
 ## Results
 
-![Volcano plot from R analysis comparing proteins in cholesterol-fed vs chow-fed liver](img/R-proteomics-Nrf1-volcano.png)
+![Volcano plot from R analysis comparing proteins in cholesterol-fed vs chow-fed liver](img/r-proteomics-nrf1-volcano.png)
 
 Complement C1q proteins A, B, C (green dots in the plot above) were identified as potentially interacting with Nrf1 in the setting of liver cholesterol accumulation. The experiment did have notable limitations, which prompted us to refine our methods and continue with further experiments.
 
