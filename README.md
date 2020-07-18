@@ -168,7 +168,12 @@ If you haven't used R or R Markdown before, see my [R guide](https://br3ndonland
 - I use [RStudio](https://www.rstudio.com/) to work with R Markdown.
 - I created an [RStudio project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects), which is required for version control and package management.
 - The R Markdown file outputs in the [GitHub document format](https://rmarkdown.rstudio.com/github_document_format.html) to output standard Markdown, in addition to HTML, for compatibility with GitHub.
-- [Packrat](https://rstudio.github.io/packrat/) was used to manage R packages for the project. [Packrat works with RStudio](https://rstudio.github.io/packrat/rstudio.html) and gives each project its own private package library. R is heavily dependent on its package ecosystem, and Packrat helps avoid problems caused by different package versions and installations.
+- [`renv`](https://rstudio.github.io/renv/index.html) was used to manage R packages for the project.
+  - `renv` helps avoid problems caused by different package versions and installations by giving each project its own isolated package library.
+  - `renv` is separate from general package managers like Homebrew used to install R and RStudio.
+  - This project previously used [Packrat](https://github.com/rstudio/packrat), a predecessor to `renv` that is now "soft-deprecated."
+    - Migration from Packrat to `renv` is simple. Run the following command in the console: `renv::migrate("~/path/to/repo")`.
+    - Then if packages aren't already installed, run `renv::restore()`, or in the Packages pane, navigate to `renv` -> Restore Library.
 
 ### Virtual environments for local Jupyter notebooks
 
