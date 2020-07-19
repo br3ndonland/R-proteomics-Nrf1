@@ -134,22 +134,22 @@ Supplementary data files, including the electronic lab notebook, protocols, data
 [Git-LFS](https://git-lfs.github.com/) was used to manage supplementary files.
 
 ```sh
-$ brew install git-lfs
-$ git lfs install
-$ cd path/to/repo
-$ touch .gitattributes
-$ git lfs track "*.docx" "*.pdf" "*.pptx" "*.xlsx" "*.zip"
+❯ brew install git-lfs
+❯ git lfs install
+❯ cd path/to/repo
+❯ touch .gitattributes
+❯ git lfs track "*.docx" "*.pdf" "*.pptx" "*.xlsx" "*.zip"
 Tracking "*.docx"
 Tracking "*.pdf"
 Tracking "*.pptx"
 Tracking "*.xlsx"
 Tracking "*.zip"
-$ git add .gitattributes
-$ git commit -m "Initialize Git LFS"
-$ git add --all
-$ git commit
-$ git push origin master
-$ git lfs push origin master
+❯ git add .gitattributes
+❯ git commit -m "Initialize Git LFS"
+❯ git add --all
+❯ git commit
+❯ git push origin master
+❯ git lfs push origin master
 ```
 
 ## Data analysis
