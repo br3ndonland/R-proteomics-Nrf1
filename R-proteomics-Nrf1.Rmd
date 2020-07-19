@@ -76,21 +76,23 @@ We then worked with the ThermoFisher Center for Multiplexed Proteomics (TCMP) to
 
 - We provided our samples to TCMP in IP elution buffer.
 - Gel
-    - The TCMP does a brief gel cleanup before mass spectrometry. Ryan claims this is helpful because the gel is agnostic to the elution buffer used to obtain the sample. However, a high protein concentration is required because of the small gel loading volume.
-    - After mass tagging, they then also do a 3 hour column separation prior to MS.
-    - If samples are divided among multiple runs (as ours were), include an internal “mix” standard for comparison. This is basically a small amount (5 μL) of all the samples mixed together.
-    - 30 μL of each sample was then loaded into a 10% Bis-Tris gel and run at 120V for 12 minutes.
-    - Gels were stained for 2 hours with Coomassie and destained overnight in water.
-    - Additional gels were run and stained with the remaining sample.
-    - Gel bands were cut out, destained, reduced and alkylated.
+  - The TCMP does a brief gel cleanup before mass spectrometry. Ryan claims this is helpful because the gel is agnostic to the elution buffer used to obtain the sample. However, a high protein concentration is required because of the small gel loading volume.
+  - After mass tagging, they then also do a 3 hour column separation prior to MS.
+  - If samples are divided among multiple runs (as ours were), include an internal “mix” standard for comparison. This is basically a small amount (5 μL) of all the samples mixed together.
+  - 30 μL of each sample was then loaded into a 10% Bis-Tris gel and run at 120V for 12 minutes.
+  - Gels were stained for 2 hours with Coomassie and destained overnight in water.
+  - Additional gels were run and stained with the remaining sample.
+  - Gel bands were cut out, destained, reduced and alkylated.
 - Enzyme digestion
-    - In-gel trypsin digestion was performed.
+  - In-gel trypsin digestion was performed.
 - Tandem Mass Tagging
-    - Tandem Mass Tags (TMTs) are used to label primary amine groups. Ten different tags are available, allowing ten samples in the same mass spectrometry run. The tags are isobaric, meaning that they elute at the same time during LC, and have the same mass during MS1 acquisition, but after MS2 peptide sequencing, they fragment into unique ion masses during MS3 reporter ion quantification.
+  - Tandem Mass Tags (TMTs) are used to label primary amine groups.
+  - Ten different tags are available, allowing ten samples in the same mass spectrometry run.
+  - The tags are isobaric, meaning that they elute at the same time during LC, and have the same mass during MS1 acquisition, but after MS2 peptide sequencing, they fragment into unique ion masses during MS3 reporter ion quantification.
 - Mass spectrometry
-    - Peptides were resuspended in 5% Acetonitrile, 5% formic acid.
-    - Peptides were separated using a gradient of 6 to 28% acetonitrile in 0.125% formic acid over 180 minutes.
-    - Half of the sample was shot on an Orbitrap fusion tribrid mass spectrometer.
+  - Peptides were resuspended in 5% Acetonitrile, 5% formic acid.
+  - Peptides were separated using a gradient of 6 to 28% acetonitrile in 0.125% formic acid over 180 minutes.
+  - Half of the sample was shot on an Orbitrap fusion tribrid mass spectrometer.
 
 Further details can be found in the [Mass spectrometry protocol](data-supplementary/BWS-proteomics-protocol.docx) and [electronic lab notebook entry](data-supplementary/R-proteomics-Nrf1-Labguru.pdf).
 
@@ -116,25 +118,24 @@ I was provided with the results in a Microsoft Excel workbook, so I performed so
 The steps I performed were:
 
 - **Normalization**
-    - To compare results across multiple runs, I divided total summed signal to noise (or normalized relative abundance) for each sample by the corresponding value for the mix standard within that run.
-    - Note that this creates a ratio, and log2 transformation should be performed before further analysis.
+  - To compare results across multiple runs, I divided total summed signal to noise (or normalized relative abundance) for each sample by the corresponding value for the mix standard within that run.
+  - Note that this creates a ratio, and log2 transformation should be performed before further analysis.
 - **Filtration**
-    - I filtered the hit list to exclude proteins with ≤2 peptides quantified in all runs.
-    - Including only proteins with ≥2 peptides means the identification of the protein itself is confident, because multiple peptides corresponding to it have been identified, and that the identification of the protein is repeatable, because ≥2 peptides were detected in each mass spectrometry run. 
+  - I filtered the hit list to exclude proteins with ≤2 peptides quantified in all runs.
+  - Including only proteins with ≥2 peptides means the identification of the protein itself is confident, because multiple peptides corresponding to it have been identified, and that the identification of the protein is repeatable, because ≥2 peptides were detected in each mass spectrometry run. 
 - **Transformation**
-    - I used log2 transformation.
-    - ∆Cholesterol=log2((HA chol/mix)/(HA cont/mix))-log2((HA cont/mix)/(lacZ/mix))
+  - I used log2 transformation.
+  - ∆Cholesterol=log2((HA chol/mix)/(HA cont/mix))-log2((HA cont/mix)/(lacZ/mix))
 - **Background subtraction**
-    - Background subtraction was not effective in these samples because protein abundance was greater in lacZ than HA in many cases. 
-    - Proteins with an HA fold change (HA cont/mix)/(lacZ/mix)<1 could be excluded (meaning that the proteins were higher abundance in lacZ samples, without the tag we were pulling down). I kept them in for this analysis.
+  - Background subtraction was not effective in these samples because protein abundance was greater in lacZ than HA in many cases. 
+  - Proteins with an HA fold change (HA cont/mix)/(lacZ/mix)<1 could be excluded (meaning that the proteins were higher abundance in lacZ samples, without the tag we were pulling down). I kept them in for this analysis.
 - **T-tests**
-    - A fold change of 1.5 (log2=0.58) is commonly used as a threshold for biological significance.
-    - 33 proteins had ∆Cholesterol>0.58.
-    - T-tests were performed in Excel for convenience: `=TTEST(group1,group2,tails,type)`
-    - Data were sorted ascending to see significant hits.
-    - Significant hits were highlighted with conditional formatting.
-    - I performed ANOVA in R on the untransformed total summed signal
-to noise/mix values for all the significant hits. See [supplementary data](data-supplementary/R).
+  - A fold change of 1.5 (log2=0.58) is commonly used as a threshold for biological significance.
+  - 33 proteins had ∆Cholesterol>0.58.
+  - T-tests were performed in Excel for convenience: `=TTEST(group1,group2,tails,type)`
+  - Data were sorted ascending to see significant hits.
+  - Significant hits were highlighted with conditional formatting.
+  - I performed ANOVA in R on the untransformed total summed signal to noise/mix values for all the significant hits. See [supplementary data](data-supplementary/R).
 
 Further details can be found in the [Mass spectrometry protocol](data-supplementary/BWS-proteomics-protocol.docx) and [electronic lab notebook entry](data-supplementary/R-proteomics-Nrf1-Labguru.pdf).
 
@@ -146,8 +147,11 @@ After normalization, filtration, transformation, background subtraction, and t-t
 
 ### R data import
 
-```{r}
-proteomics_data <- read.table("data/R-proteomics-Nrf1.csv", header=TRUE, sep=",")
+```{r proteomics-01-import}
+proteomics_data <-
+  read.table("data/R-proteomics-Nrf1.csv",
+             header = TRUE,
+             sep = ",")
 attach(proteomics_data)
 ```
 
@@ -166,66 +170,67 @@ attach(proteomics_data)
 
 This plot compares chow-fed mice with mice fed the Paigen diet to promote accumulation of cholesterol in the liver, and demonstrates the increased abundance of Complement C1qA, C1qB, and C1qC, in mice fed the Paigen diet.
 
-```{r}
+```{r proteomics-02-plot-hachol}
 # bold axis titles
-par(font.lab=2)
+
+par(font.lab = 2)
 
 # create plot
-with(proteomics_data,
-     plot(
-       log2_FC_HAchol_HAchow,
-       -log10(pvalue),
-       pch=20,
-       xlim=c(-2,2),
-       ylim=c(0,3),
-       yaxp=c(0,3,3),
-       main="Cholesterol-induced Nrf1 interacting proteins",
-       xlab="log2(FC HA chol/HA chow)",
-       ylab="-log10(pvalue HA chol vs HA chow)",
-       family="Raleway"
-       )
-     )
+with(
+  proteomics_data,
+  plot(
+    log2_FC_HAchol_HAchow,-log10(pvalue),
+    pch = 20,
+    xlim = c(-2, 2),
+    ylim = c(0, 3),
+    yaxp = c(0, 3, 3),
+    main = "Cholesterol-induced Nrf1 interacting proteins",
+    xlab = "log2(FC HA chol/HA chow)",
+    ylab = "-log10(pvalue HA chol vs HA chow)"
+  )
+)
 
-# Add colored points: 
+# Add colored points:
 # red if pvalue<0.05, orange if [log2FC]>1, green if both)
-with(subset(proteomics_data, pvalue<.05),
-     points(
-       log2_FC_HAchol_HAchow,
-       -log10(pvalue),
-       pch=20,
-       col="red"
-       )
-     )
+with(
+  subset(proteomics_data, pvalue < .05),
+  points(
+    log2_FC_HAchol_HAchow,-log10(pvalue),
+    pch = 20,
+    col = "red"
+  )
+)
 
-with(subset(proteomics_data, abs(log2_FC_HAchol_HAchow)>1),
-     points(
-       log2_FC_HAchol_HAchow,
-       -log10(pvalue),
-       pch=20,
-       col="orange"
-       )
-     )
+with(
+  subset(proteomics_data, abs(log2_FC_HAchol_HAchow) > 1),
+  points(
+    log2_FC_HAchol_HAchow,-log10(pvalue),
+    pch = 20,
+    col = "orange"
+  )
+)
 
-with(subset(proteomics_data, pvalue<.05 & abs(log2_FC_HAchol_HAchow)>1),
-     points(
-       log2_FC_HAchol_HAchow,
-       -log10(pvalue),
-       pch=20,
-       col="green"
-       )
-     )
+with(
+  subset(proteomics_data, pvalue < .05 &
+           abs(log2_FC_HAchol_HAchow) > 1),
+  points(
+    log2_FC_HAchol_HAchow,-log10(pvalue),
+    pch = 20,
+    col = "green"
+  )
+)
 
 # Label points with the textxy function from the calibrate package
 library(calibrate)
-with(subset(proteomics_data, pvalue<.05 & abs(log2_FC_HAchol_HAchow)>1),
-     textxy(
-       log2_FC_HAchol_HAchow,
-       -log10(pvalue),
-       labs=Gene,
-       cex=1,
-       family="Raleway"
-       )
-     )
+with(
+  subset(proteomics_data, pvalue < .05 &
+           abs(log2_FC_HAchol_HAchow) > 1),
+  textxy(
+    log2_FC_HAchol_HAchow,-log10(pvalue),
+    labs = Gene,
+    cex = 1
+  )
+)
 
 ```
 
@@ -233,62 +238,68 @@ with(subset(proteomics_data, pvalue<.05 & abs(log2_FC_HAchol_HAchow)>1),
 
 Bortezomib treatment alters the proteome. 
 
-```{r}
+```{r proteomics-02-plot-habort}
 # bold axis titles
-par(font.lab=2)
+par(font.lab = 2)
 
 # create plot
-with(proteomics_data,
-     plot(
-       log2_FC_HAbort_HAchow,
-       -log10(pvaluebort),
-       pch=20,
-       xlim=c(-3,3),
-       ylim=c(0,4),
-       main="Nrf1 AP-MS volcano plot Bortezomib vs chow",
-       xlab="log2(FC HA bort/HA chow)",
-       ylab="-log10(pvalue HA bort vs HA chow)"
-       )
-     )
+with(
+  proteomics_data,
+  plot(
+    log2_FC_HAbort_HAchow,-log10(pvaluebort),
+    pch = 20,
+    xlim = c(-3, 3),
+    ylim = c(0, 4),
+    main = "Nrf1 AP-MS volcano plot Bortezomib vs chow",
+    xlab = "log2(FC HA bort/HA chow)",
+    ylab = "-log10(pvalue HA bort vs HA chow)"
+  )
+)
 # Add colored points:
 # red if pvalue<0.05, orange if log2FC>1, green if both)
-with(subset(proteomics_data, pvaluebort<.05 ),
-     points(
-       log2_FC_HAbort_HAchow,
-       -log10(pvaluebort),
-       pch=20,
-       col="red"
-       )
-     )
+with(
+  subset(proteomics_data, pvaluebort < .05),
+  points(
+    log2_FC_HAbort_HAchow,-log10(pvaluebort),
+    pch = 20,
+    col = "red"
+  )
+)
 
-with(subset(proteomics_data, abs(log2_FC_HAbort_HAchow)>1),
-     points(
-       log2_FC_HAbort_HAchow,
-       -log10(pvaluebort),
-       pch=20,
-       col="orange"
-       )
-     )
+with(
+  subset(proteomics_data, abs(log2_FC_HAbort_HAchow) > 1),
+  points(
+    log2_FC_HAbort_HAchow,-log10(pvaluebort),
+    pch = 20,
+    col = "orange"
+  )
+)
 
-with(subset(proteomics_data, pvaluebort<.05 & abs(log2_FC_HAbort_HAchow)>1),
-     points(
-       log2_FC_HAbort_HAchow,
-       -log10(pvaluebort),
-       pch=20,
-       col="green"
-       )
-     )
+with(
+  subset(
+    proteomics_data,
+    pvaluebort < .05 & abs(log2_FC_HAbort_HAchow) > 1
+  ),
+  points(
+    log2_FC_HAbort_HAchow,-log10(pvaluebort),
+    pch = 20,
+    col = "green"
+  )
+)
 
 # Label points with the textxy function from the calibrate package
 library(calibrate)
-with(subset(proteomics_data, pvaluebort<.05 & abs(log2_FC_HAbort_HAchow)>1),
-     textxy(
-       log2_FC_HAbort_HAchow,
-       -log10(pvaluebort),
-       labs=Gene,
-       cex=1
-       )
-     )
+with(
+  subset(
+    proteomics_data,
+    pvaluebort < .05 & abs(log2_FC_HAbort_HAchow) > 1
+  ),
+  textxy(
+    log2_FC_HAbort_HAchow,-log10(pvaluebort),
+    labs = Gene,
+    cex = 1
+  )
+)
 
 ```
 
@@ -296,64 +307,66 @@ with(subset(proteomics_data, pvaluebort<.05 & abs(log2_FC_HAbort_HAchow)>1),
 
 The proteome was not significantly different with or without the HA tag, indicating issues with the HA immunoprecipitation. Note that the code for labeling points appears to be separated from the rest of the code for the plot, possibly because there were no points labeled.
 
-```{r}
+```{r proteomics-02-plot-halacz}
 # bold axis titles
-par(font.lab=2)
+par(font.lab = 2)
 
 # create plot
-with(proteomics_data,
-     plot(
-       log2_FC_HAchow_lacZ,
-       -log10(pvaluechow),
-       pch=20,
-       xlim=c(-2,2),
-       ylim=c(0,3),
-       yaxp=c(0,3,3),
-       main="Nrf1 AP-MS volcano plot HA vs lacZ",
-       xlab="log2(FC HA chow/lacZ chow)",
-       ylab="-log10(pvalue HA chow vs lacZ chow)"
-       )
-     )
+with(
+  proteomics_data,
+  plot(
+    log2_FC_HAchow_lacZ,-log10(pvaluechow),
+    pch = 20,
+    xlim = c(-2, 2),
+    ylim = c(0, 3),
+    yaxp = c(0, 3, 3),
+    main = "Nrf1 AP-MS volcano plot HA vs lacZ",
+    xlab = "log2(FC HA chow/lacZ chow)",
+    ylab = "-log10(pvalue HA chow vs lacZ chow)"
+  )
+)
 
 # Add colored points:
 # red if pvalue<0.05, orange if [log2FC]>1, green if both)
-with(subset(proteomics_data, pvaluechow<.05),
-     points(
-       log2_FC_HAchow_lacZ,
-       -log10(pvaluechow),
-       pch=20,
-       col="red"
-       )
-     )
+with(
+  subset(proteomics_data, pvaluechow < .05),
+  points(
+    log2_FC_HAchow_lacZ,-log10(pvaluechow),
+    pch = 20,
+    col = "red"
+  )
+)
 
-with(subset(proteomics_data, abs(log2_FC_HAchow_lacZ)>1),
-     points(
-       log2_FC_HAchow_lacZ,
-       -log10(pvaluechow),
-       pch=20,
-       col="orange"
-       )
-     )
+with(
+  subset(proteomics_data, abs(log2_FC_HAchow_lacZ) > 1),
+  points(
+    log2_FC_HAchow_lacZ,-log10(pvaluechow),
+    pch = 20,
+    col = "orange"
+  )
+)
 
-with(subset(proteomics_data, pvaluechow<.05 & abs(log2_FC_HAchow_lacZ)>1),
-     points(
-       log2_FC_HAchow_lacZ,
-       -log10(pvaluechow),
-       pch=20,
-       col="green"
-       )
-     )
+with(
+  subset(proteomics_data, pvaluechow < .05 &
+           abs(log2_FC_HAchow_lacZ) > 1),
+  points(
+    log2_FC_HAchow_lacZ,-log10(pvaluechow),
+    pch = 20,
+    col = "green"
+  )
+)
 
 # Label points with the textxy function from the calibrate package
 library(calibrate)
-with(subset(proteomics_data, pvaluechow<.05 & abs(log2_FC_HAchow_lacZ)>1),
-     textxy(
-       log2_FC_HAchow_lacZ,
-       -log10(pvaluechow),
-       labs=Gene,
-       cex=1
-       )
-     )
+with(
+  subset(proteomics_data, pvaluechow < .05 &
+           abs(log2_FC_HAchow_lacZ) > 1),
+  textxy(
+    log2_FC_HAchow_lacZ,-log10(pvaluechow),
+    labs = Gene,
+    cex = 1
+  )
+)
 
 ```
 
@@ -370,35 +383,36 @@ head(dotsize)
 
 then put `cex=dotsize` inside the `plot()` and `points()` functions.
 
-```{r}
+```{r proteomics-02-plot-scatter}
 # set size of points according to p value
 dotsize <- -log10(pvalue)
 
 # bold axis titles
-par(font.lab=2)
+par(font.lab = 2)
 
 # create plot
-with(proteomics_data,
-     plot(
-       log2_FC_HAchol_HAchow,
-       log2_FC_HAbort_HAchow,
-       pch=20,
-       main="Nrf1 AP-MS scatter plot",
-       xlab="log2(FC HA chol/HA chow)",
-       ylab="log2(FC HA bort/HA chow)",
-       cex=dotsize
-       )
-     )
+with(
+  proteomics_data,
+  plot(
+    log2_FC_HAchol_HAchow,
+    log2_FC_HAbort_HAchow,
+    pch = 20,
+    main = "Nrf1 AP-MS scatter plot",
+    xlab = "log2(FC HA chol/HA chow)",
+    ylab = "log2(FC HA bort/HA chow)",
+    cex = dotsize
+  )
+)
 
 # Label points with the textxy function from the calibrate package
 library(calibrate)
-with(subset(proteomics_data, pvalue<.05 & abs(log2_FC_HAchol_HAchow)>1),
-     textxy(
-       log2_FC_HAchol_HAchow,
-       log2_FC_HAbort_HAchow,
-       labs=Gene
-       )
-     )
+with(
+  subset(proteomics_data, pvalue < .05 &
+           abs(log2_FC_HAchol_HAchow) > 1),
+  textxy(log2_FC_HAchol_HAchow,
+         log2_FC_HAbort_HAchow,
+         labs = Gene)
+)
 
 ```
 
