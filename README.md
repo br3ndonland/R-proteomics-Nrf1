@@ -129,28 +129,7 @@ I incorporated practices for reproducible scientific experimentation and data an
 
 ## Supplementary data
 
-Supplementary data files, including the electronic lab notebook, protocols, datasheets and information on materials used, raw data, other data analyses, slides, and images, are available in the _[data-supplementary](data-supplementary)_ sub-directory of this repository.
-
-[Git-LFS](https://git-lfs.github.com/) was used to manage supplementary files.
-
-```sh
-❯ brew install git-lfs
-❯ git lfs install
-❯ cd path/to/repo
-❯ touch .gitattributes
-❯ git lfs track "*.docx" "*.pdf" "*.pptx" "*.xlsx" "*.zip"
-Tracking "*.docx"
-Tracking "*.pdf"
-Tracking "*.pptx"
-Tracking "*.xlsx"
-Tracking "*.zip"
-❯ git add .gitattributes
-❯ git commit -m "Initialize Git LFS"
-❯ git add --all
-❯ git commit
-❯ git push origin master
-❯ git lfs push origin master
-```
+Supplementary data files, including the electronic lab notebook, protocols, datasheets and information on materials used, raw data, other data analyses, slides, and images, are available [here](https://drive.proton.me/urls/43K7TYD9JG#9Yv6vFcMsYLU).
 
 ## Data analysis
 
