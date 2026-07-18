@@ -1,16 +1,10 @@
-# README
+# DEPRECATION NOTICE
+
+This repo has been superseded by [br3ndonland/nrf1-proteomics](https://github.com/br3ndonland/nrf1-proteomics).
+
+---
 
 Molecular biology experiments, mass spectrometry-based proteomics, and reproducible data analysis in R
-
-Brendon Smith
-
-[br3ndonland](https://github.com/br3ndonland)
-
-<a href="https://colab.research.google.com/github/br3ndonland/R-proteomics-Nrf1/blob/master/R-proteomics-Nrf1-R.ipynb">
-  <img width="50px" src="https://colab.research.google.com/img/colab_favicon.ico">
-</a> Launch in Google Colaboratory
-
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/br3ndonland/R-proteomics-nrf1/master?urlpath=lab) Launch in Binder container
 
 [![license](https://img.shields.io/badge/license-CC--BY--4.0%20-blue.svg?longCache=true&style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 
